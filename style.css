@@ -15,11 +15,25 @@ body {
     box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    align-items: center;
+    padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
-.header > div > h1 {
+.header .title {
+    margin-right: auto;
+}
+
+.header .title > h1 {
     margin: 0;
+}
+
+.header .date {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .submit {
+    margin: 10px;
 }
 
 main {
@@ -40,7 +54,7 @@ main {
     width: 500px;
 }
 
-.card > img {
+.card > a > img {
     height: 500px;
     width: 100%;
 }
@@ -66,10 +80,16 @@ main {
 
 .info .buttons > button {
     cursor: pointer;
+    font-size: 1rem;
+}
+
+.info .buttons .like-button.liked {
+    color: red;
 }
 
 .explanation {
     background-color: white;
+    cursor: pointer;
     padding: 2rem;
     position: absolute;
     max-height: 100%;
