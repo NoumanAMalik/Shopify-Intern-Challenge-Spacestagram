@@ -80,11 +80,28 @@ main {
 
 .info .buttons > button {
     cursor: pointer;
-    font-size: 1rem;
+    border: none;
+    padding-top: 4px;
+    border-radius: 50%;
+    color: #E5989B;
+    background-color: white;
 }
 
 .info .buttons .like-button.liked {
-    color: red;
+    color: #E5989B;
+}
+
+.info .buttons .like-button:focus {
+    animation: spin 1s;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .explanation {
@@ -112,4 +129,9 @@ main {
 
 .explanation.show {
     transform: translateY(0);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
 }
