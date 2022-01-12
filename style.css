@@ -107,6 +107,36 @@ main {
     margin: 0;
 }
 
+.info > .text > .copy-notification {
+    color: #e0767a;
+    position: absolute;
+    bottom : 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: 800;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.info > .text > .copy-notification.show {
+    animation: show-and-move 2.4s;
+}
+
+@keyframes show-and-move {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
 .info > .buttons {
     display: flex;
     flex-direction: column;

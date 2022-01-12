@@ -1,6 +1,6 @@
 const API_KEY = "?api_key=NNsdz9Xmem8H58k778mGY7dpDkcT38gWXYY05MEd";
 const API_URL = "https://api.nasa.gov/planetary/apod";
-
+ 
 const main = document.querySelector("main");
 const date = document.getElementById("date");
 const submit = document.getElementById("submit-button");
@@ -55,6 +55,7 @@ function addCards(cards) {
                     <div class="text">
                         <h3 class="title">${title}</h3>  
                         <p>${date}</p>
+                        <small class="copy-notification">Image URL copied to clipboard</small>
                     </div>
                     <div class="buttons">
                         <button class="like-button">
@@ -80,6 +81,7 @@ function addCards(cards) {
                 </div>
             `;
 
+            const copyNotif = cardElement.querySelector(".copy-notification");
             const info = cardElement.querySelector(".info-button");
             const share = cardElement.querySelector(".share-button");
             const like = cardElement.querySelector(".like-button");
@@ -107,6 +109,11 @@ function addCards(cards) {
                 textArea.select();
                 document.execCommand("copy");
                 textArea.remove();
+
+                copyNotif.classList.add("show");
+                copyNotif.addEventListener("animationend", () => {
+                    copyNotif.classList.remove("show");
+                });
             });
 
             info.addEventListener("click", () => {
