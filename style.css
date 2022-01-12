@@ -5,13 +5,13 @@
 }
 
 body {
-    background-color: #FFCDB2;
+    background-color: #424549;
     font-family: "Roboto", sans-serif;
     margin: 0;
 }
 
 .header {
-    background-color: #FFB4A2;
+    background-color: #8397e2;
     box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
@@ -19,21 +19,50 @@ body {
     padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
-.header .title {
+.header > .title {
     margin-right: auto;
 }
 
-.header .title > h1 {
+.header > .title > h1 {
     margin: 0;
 }
 
-.header .date {
+.header > .date {
     display: flex;
     flex-direction: column;
 }
 
-.header .submit {
+.header > .date > .date-input {
+    margin-top: 5px;
+    background-color: #8397e2;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    transform: scale(100%);
+    transition: transform 0.3s;
+}
+
+.header > .date > .date-input:hover {
+    transform: scale(110%);
+}
+
+.header > .submit {
     margin: 10px;
+}
+
+.header > .submit > .submit-button {
+    background-color: inherit;
+    cursor: pointer;
+    border: none;
+    padding-top: 4px;
+    transform: scale(100%);
+    transition: transform 0.3s;
+}
+
+.header > .submit > .submit-button:hover {
+    transform: scale(120%);
 }
 
 main {
@@ -57,6 +86,12 @@ main {
 .card > a > img {
     height: 500px;
     width: 100%;
+    transform: scale(100%);
+    transition: transform 0.3s;
+}
+
+.card > a > img:hover {
+    transform: scale(110%);
 }
 
 .info {
@@ -72,35 +107,61 @@ main {
     margin: 0;
 }
 
-.info .buttons {
+.info > .buttons {
     display: flex;
     flex-direction: column;
     gap: 10px
 }
 
-.info .buttons > button {
+.info > .buttons > button {
     cursor: pointer;
     border: none;
     padding-top: 4px;
     border-radius: 50%;
-    color: #E5989B;
+    color: #e0767a;
     background-color: white;
+    transform: scale(100%);
+    transition: transform 0.3s;
 }
 
-.info .buttons .like-button.liked {
-    color: #E5989B;
+.info > .buttons > button:hover {
+    transform: scale(130%);
 }
 
-.info .buttons .like-button:focus {
-    animation: spin 1s;
+.info > .buttons > .like-button.liked {
+    color: #e0767a;
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
+.info > .buttons > .like-button:focus {
+    animation: reverse-spin-and-shrink 2s;
+}
+
+@keyframes reverse-spin-and-shrink {
+    0% {
+        transform: rotate(0deg) scale(100%);
     }
-    to {
-        transform: rotate(360deg);
+    50% {
+        transform: rotate(-360deg) scale(50%);
+    }
+    100% {
+        transform: rotate(-720deg) scale(100%);
+    }
+}
+
+.info > .buttons > .like-button.liked:focus {
+    animation: spin-and-grow 2s;
+    /* animation: grow 1s; */
+}
+
+@keyframes spin-and-grow {
+    0% {
+        transform: rotate(0deg) scale(100%);
+    }
+    50% {
+        transform: rotate(360deg) scale(200%);
+    }
+    100% {
+        transform: rotate(720deg) scale(100%);
     }
 }
 
@@ -131,7 +192,24 @@ main {
     transform: translateY(0);
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+footer > button {
+    background-color: #8397e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    transform: scale(100%);
+    transition: transform 0.3s;
+}
+
+footer > button:hover {
+    transform: scale(110%);
 }
