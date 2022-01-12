@@ -35,6 +35,7 @@ body {
 .header > .date > .date-input {
     margin-top: 5px;
     background-color: #8397e2;
+    text-decoration-color: black;
     border-style: solid;
     border-color: black;
     border-width: 2px;
