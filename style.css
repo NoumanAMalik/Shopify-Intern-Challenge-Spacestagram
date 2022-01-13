@@ -41,12 +41,12 @@ body {
     border-width: 2px;
     border-radius: 6px;
     cursor: pointer;
-    transform: scale(100%);
+    transform: scale(1, 1);
     transition: transform 0.3s;
 }
 
 .header > .date > .date-input:hover {
-    transform: scale(110%);
+    transform: scale(1.1, 1.1);
 }
 
 .header > .submit {
@@ -58,12 +58,12 @@ body {
     cursor: pointer;
     border: none;
     padding-top: 4px;
-    transform: scale(100%);
+    transform: scale(1, 1);
     transition: transform 0.3s;
 }
 
 .header > .submit > .submit-button:hover {
-    transform: scale(120%);
+    transform: scale(1.2, 1.2);
 }
 
 main {
@@ -87,12 +87,12 @@ main {
 .card > a > img {
     height: 500px;
     width: 100%;
-    transform: scale(100%);
+    transform: scale(1, 1);
     transition: transform 0.3s;
 }
 
 .card > a > img:hover {
-    transform: scale(110%);
+    transform: scale(1.1, 1.1);
 }
 
 .info {
@@ -151,12 +151,12 @@ main {
     border-radius: 50%;
     color: #e0767a;
     background-color: white;
-    transform: scale(100%);
+    transform: scale(1, 1);
     transition: transform 0.3s;
 }
 
 .info > .buttons > button:hover {
-    transform: scale(130%);
+    transform: scale(1.3, 1.3);
 }
 
 .info > .buttons > .like-button.liked {
@@ -169,13 +169,13 @@ main {
 
 @keyframes reverse-spin-and-shrink {
     0% {
-        transform: rotate(0deg) scale(100%);
+        transform: rotate(0deg) scale(1, 1);
     }
     50% {
-        transform: rotate(-360deg) scale(50%);
+        transform: rotate(-360deg) scale(0.5, 0.5);
     }
     100% {
-        transform: rotate(-720deg) scale(100%);
+        transform: rotate(-720deg) scale(1, 1);
     }
 }
 
@@ -186,13 +186,13 @@ main {
 
 @keyframes spin-and-grow {
     0% {
-        transform: rotate(0deg) scale(100%);
+        transform: rotate(0deg) scale(1, 1);
     }
     50% {
-        transform: rotate(360deg) scale(200%);
+        transform: rotate(360deg) scale(2, 2);
     }
     100% {
-        transform: rotate(720deg) scale(100%);
+        transform: rotate(720deg) scale(1, 1);
     }
 }
 
@@ -237,10 +237,10 @@ footer > button {
     border-radius: 5px;
     cursor: pointer;
     padding: 0.5rem;
-    transform: scale(100%);
+    transform: scale(1, 1);
     transition: transform 0.3s;
 }
 
 footer > button:hover {
-    transform: scale(110%);
+    transform: scale(1.1, 1.1);
 }
